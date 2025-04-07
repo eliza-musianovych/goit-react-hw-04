@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(3, 3, 119);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.input {
+    margin-right: 20px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.input:focus {
+    outline: none;
+    border: 2px solid rgb(43, 43, 255);
+}
+
+.btn {
+    padding: 5px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid transparent;
+    position: relative;
+    top: 2px;
+}
+
+.btn:focus, .btn:hover {
+    outline: none;
+    border: 2px solid rgb(43, 43, 255);
+}
