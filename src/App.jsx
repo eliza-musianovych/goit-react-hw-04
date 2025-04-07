@@ -20,14 +20,15 @@ export default function App() {
   const [modalImage, setModalImage] = useState(null);
 
   const modalOpen = (item) => {
-    console.log(item);
+    if (!modalIsOpen) {
     setModalImage(item);
     setModalIsOpen(true);
-  }
+    }
+  };
 
   const modalClose = () => {
     setModalIsOpen(false);
-  }
+  };
 
   const fetchData= async (searchQuery, pageNumber = 1)  => {
     try {
@@ -49,7 +50,7 @@ export default function App() {
     setGallery(prev => [...prev, ...response.data.results]);
     setTotalResult(response.data.total); 
 
-    } catch (error) {
+    } catch {
       setError(true);
     } finally {
       setLoading(false);

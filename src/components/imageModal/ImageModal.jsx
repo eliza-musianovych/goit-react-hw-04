@@ -1,14 +1,22 @@
 import css from "./ImageModal.module.css"
 import Modal from 'react-modal';
 
-export default function ImageModal({modalIsOpen, item: {urls, alt_description}, modalClose}) {
+Modal.setAppElement('#root'); 
+
+export default function ImageModal({modalIsOpen, item: {urls, alt_description, likes}, modalClose}) {
 
   return <Modal
     isOpen={modalIsOpen}
     onRequestClose={modalClose}
     contentLabel="Modal Image"
-    overlatClassName={css.modal}
+    overlayClassName={css.overlay}
+    className={css.modal}
+    shouldCloseOnEsc={true} 
+    shouldCloseOnOverlayClick={true}
   >
-    <img src={urls.regular} alt={alt_description} />
+    <div className={css.container}>
+      <img className={css.img} src={urls.regular} alt={alt_description} />
+      <div className={css.caption}>{likes}</div>
+    </div>
   </Modal>
 }
