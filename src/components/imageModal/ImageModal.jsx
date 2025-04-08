@@ -16,7 +16,7 @@ export default function ImageModal({modalIsOpen, item: {urls, alt_description, l
   >
     <div className={css.container}>
       <img className={css.img} src={urls.regular} alt={alt_description} />
-      <div className={css.caption}>{likes}</div>
+      <div className={css.caption}>{likes} likes</div>
     </div>
   </Modal>
 }

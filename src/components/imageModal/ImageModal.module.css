@@ -16,6 +16,7 @@
     justify-content: center;
     z-index: 10000;
     width: fit-content;
+    border: none;
 }
 
 .container {
